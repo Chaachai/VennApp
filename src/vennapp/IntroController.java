@@ -5,33 +5,16 @@ package vennapp;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.rmi.Naming;
-import java.rmi.NotBoundException;
-import java.rmi.Remote;
-import java.rmi.RemoteException;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
 import util.Session;
 
 /**
@@ -53,8 +36,6 @@ public class IntroController implements Initializable {
     private TextField t2;
     @FXML
     private TextField t3;
-
-  
 
     private boolean isOkay() {
         if (t1.getText().trim().isEmpty() || t2.getText().trim().isEmpty()
@@ -91,8 +72,7 @@ public class IntroController implements Initializable {
     }
 
     @FXML
-    public void minimizeApp(ActionEvent event
-    ) {
+    public void minimizeApp(ActionEvent event) {
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         stage.setIconified(true);
     }
@@ -101,10 +81,8 @@ public class IntroController implements Initializable {
      * Initializes the controller class.
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb
-    ) {
+    public void initialize(URL url, ResourceBundle rb) {
         error.setVisible(false);
-
     }
 
 }

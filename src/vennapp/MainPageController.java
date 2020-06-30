@@ -1,6 +1,5 @@
 package vennapp;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -202,13 +201,7 @@ public class MainPageController implements Initializable {
      * Get image by name.
      */
     private Image getImage(String name) {
-        String currentDirectory = System.getProperty("user.dir");
-//        System.out.println("The current working directory is " + currentDirectory);
-        String path = currentDirectory + "\\src\\vennapp\\images\\" + name + ".png";
-//        System.out.println("PATH === " + path);
-        File file = new File(path);
-        Image image = new Image(file.toURI().toString());;
-        return image;
+        return new Image(getClass().getResource("images/" + name + ".png").toString(), true);
     }
 
     /**
@@ -292,20 +285,14 @@ public class MainPageController implements Initializable {
     }
 
     private void toggle3_off_cas_2() {
-//        p5.setValue("TOUT");
-//        p6.setValue("EST");
-//        t5.setValue(t4.getValue());
-//        t6.setValue(t2.getValue());
+        p5.setValue("TOUT");
+        p6.setValue("EST");
+        t5.setValue(t4.getValue());
+        t6.setValue(t2.getValue());
         diagramme.setImage(getImage("2"));
         predicat1.setText(t1.getValue());
         predicat2.setText(t2.getValue());
         predicat3.setText(t4.getValue());
-        JOptionPane.showMessageDialog(
-                null,
-                "Ce cas n\'a pas de conclusion !\nMais voici le diagramme quand même ",
-                " Pas de conclusion ",
-                JOptionPane.INFORMATION_MESSAGE
-        );
     }
 
     private void toggle3_off_cas_3() {

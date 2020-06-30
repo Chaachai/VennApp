@@ -19,7 +19,7 @@
             <Image url="@images/night-sunset-gradation-blur-wallpaper-hd-iphone-wallpapers-in-blur-wallpapers-750_1334.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="181.0" fitWidth="200.0" layoutX="68.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="diagramme" fitHeight="181.0" fitWidth="200.0" layoutX="68.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/VennApp_Logo.png" />
          </image>
